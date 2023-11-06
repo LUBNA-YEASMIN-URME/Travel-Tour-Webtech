@@ -42,7 +42,7 @@
 </form>
 <p class="a">
    <span>Need an account?</span> <a href=" ../views/signup_view.php">Sign Up</a><br>
-    <a href="../views/forget_password_view.php" >Forget Password</a>
+    
 </p>
 </div>
 </body>
