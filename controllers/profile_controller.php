@@ -48,16 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
 
-    // Image Validation
-    if (isset($_FILES["image"])) {
-        $source = $_FILES['image']['tmp_name'];
-        $ext = explode(".", $_FILES['image']['name']);
-        $ext = $ext[count($ext) - 1];
-        $destination = '../images/' . $name . $age . '.' . $ext;
-        move_uploaded_file($source, $destination);
-        $image = $destination;
-    }
-
+    
 
     if ($isValid) {
         $conn = mysqli_connect("localhost", "root", "", "travel-tour", 3306);
@@ -76,6 +67,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         header("Location: ../views/profile.php");
     }
 } else {
-    // Handle cases where the form was not submitted
+    
     header("Location: ../views/profile_view.php");
 }

@@ -17,7 +17,7 @@ if (!isset($_SESSION["email"])) {
 </head>
 
 <body>
-    <?php require "nav_view.php" ?>
+    
     <h2 class="HeadingTag">Change Password</h2>
 
     <?php
@@ -64,7 +64,7 @@ if (isset($_SESSION["cnew_password_err"])) {
 <br><input type="submit" value="Change Password"><br>
 </form>
 </div>
-    <?php include "../views/footer_view.php" ?>
+    
 </body>
 
 </html>

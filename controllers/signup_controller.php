@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION["email"])) {
-    header("Location: ../views/home_view.php");
+    header("Location: ../views/profile.php");
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         session_unset();
         $_SESSION["email"] = $email;
-        header("Location: ../views/home_view.php");
+        header("Location: ../views/login_view.php");
     } else {
         header("Location: ../views/signup_view.php");
     }

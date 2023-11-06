@@ -38,16 +38,13 @@ if (mysqli_stmt_prepare($stmt, "SELECT  contact, email, nid, age,name,image FROM
 </head>
 
 <body>
-    <?php require "nav_view.php"; ?>
+   
 
     <h2 class="HeadingTag">Profile</h2>
 
     <div class="container">
         <form action="../controllers/profile_controller.php" method="post" enctype="multipart/form-data" novalidate>
-            <!-- Profile Image -->
-            <br><label for="image">Profile Image</label><br>
-            <img src="<?php echo $image ?>" alt="Image" width="200"><br>
-            <input type="file" name="image" id="image"><br>
+            
             <!-- Name -->
             <br><label for="name">Name*</label><br>
             <input type="text" name="name" id="name" value="<?php echo $name; ?>"><br>
@@ -74,7 +71,7 @@ if (mysqli_stmt_prepare($stmt, "SELECT  contact, email, nid, age,name,image FROM
         </form>
     </div>
 
-    <?php require "../views/footer_view.php"; ?>
+    
 </body>
 
 </html>
