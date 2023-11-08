@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($curr_password)) {
         $_SESSION["curr_password_err"] = "Please enter your current password.";
         $isValid = false;
-        //
+        
     } else {
         $conn = mysqli_connect("localhost", "root", "", "travel-tour", 3306);
 
