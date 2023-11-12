@@ -11,16 +11,19 @@
         $user = getUserByEmail($email); // Fetch user data by email
     
         if ($user) {
+            
             $userType = $user['type'];
             if ($userType === 'Admin') {
                 // If User is an admin
                 $_SESSION['isAdmin'] = true;
                 $_SESSION['flag'] = 'true';
+                setcookie('flag', 'true', time()+3600, '/');
                 header('location: ../views/admin_view.php');
             } else {
                 // If User is not an admin
                 $_SESSION['isAdmin'] = false;
                 $_SESSION['flag'] = 'true';
+                setcookie('flag', 'true', time()+3600, '/');
                 header('location: ../views/home_view.php');
             }
             

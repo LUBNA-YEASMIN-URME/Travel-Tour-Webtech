@@ -19,10 +19,11 @@ if (isset($_SESSION["customer_email"])) {
 <body class="backGround center">
 
 <br><br><br><br>
-<h1 class="HeadingTag">Forget Password</h1>
+
 
 <center>
-    <div class="container">
+<h1>Forget Password</h1>
+    <div>
         <form action="../controllers/forget_password_controller.php" method="post" novalidate>
             <!-- Email -->
             <br><label for="email">Email*</label><br>

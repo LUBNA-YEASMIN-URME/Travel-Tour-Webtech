@@ -10,10 +10,11 @@
 
 <body class="backGround center">
     <br><br><br><br>
-    <h1 class="HeadingTag">Sign Up</h1>
+    
 
     <center>
-        <div class="container">
+    <h1>Sign Up</h1>
+        <div>
             <form action="../controllers/signup_controller.php" method="post" novalidate>
                 <!-- Name -->
                 <br><label for="name">Name*</label><br>

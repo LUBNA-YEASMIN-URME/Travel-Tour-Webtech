@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,10 +11,9 @@
 
 <body class="backGround center">
     <br><br><br><br>
-    <h1 class="HeadingTag">Good To See you Again</h1>
-
     <center>
-        <div class="container">
+    <h1>Good To See you Again</h1>
+        <div>
             <form action="../controllers/login_controller.php" method="post" novalidate>
                 <!-- Email -->
                 <br><label for="email">Email*</label><br>

@@ -126,5 +126,50 @@ function signup($name, $contact, $email, $password, $nid, $age)
     return false; // reset failed
 }
 
+//payment processing 
+
+function processPayment($pay_amount, $paymentMethod, $transactionID) {
+    $con = getConnection();
+    
+    // Sanitize input data
+    $pay_amount = mysqli_real_escape_string($con, $pay_amount);
+    $paymentMethod = mysqli_real_escape_string($con, $paymentMethod);
+    $transactionID = mysqli_real_escape_string($con, $transactionID);
+
+    // Perform any additional validation or processing logic here
+
+    // Insert payment data into the database (you may need to adapt table and field names)
+    $sql = "INSERT INTO payment_info (pay_amount, payment_method, transaction_id) VALUES ('{$pay_amount}', '{$paymentMethod}', '{$transactionID}')";
+    $result = mysqli_query($con, $sql);
+
+    if ($result) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+//billing info
+
+function billing($full_name, $address, $city, $zip_code)
+{
+    $con = getConnection();
+    $full_name = mysqli_real_escape_string($con, $full_name);
+    $address = mysqli_real_escape_string($con, $address);
+    $city = mysqli_real_escape_string($con, $city);
+    $zip_code = mysqli_real_escape_string($con, $zip_code);
+
+    $sql = "INSERT INTO billing_info (full_name, address, city, zip_code) VALUES ('{$full_name}', '{$address}', '{$city}', '{$zip_code}')";
+    $result = mysqli_query($con, $sql);
+
+    if ($result) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
 
 ?>
